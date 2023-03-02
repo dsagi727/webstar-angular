@@ -1,0 +1,49 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0 auto;
+  padding: 0;
+  background-color: $dark-grey;
+}
+
+// H1-H6
+h1 {
+  @include title($white, 'Poppins-Medium', 46px);
+}
+
+h2 {
+  @include title($white,'Poppins-Medium', 34px);
+}
+
+h3 {
+  @include title($white,'Poppins-Medium', 28px);
+}
+
+h4 {
+  @include title($white,'Poppins-Medium', 24px);
+}
+
+h5 {
+  @include title($white,'Poppins-Medium', 20px);
+}
+
+h6 {
+  @include title($white,'Poppins-Medium', 14px);
+}
+
+p{
+@include text($white, 'PoppinsRegular')
+}
+
+
