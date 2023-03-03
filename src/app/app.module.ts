@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './components/page-modules/login-page/login-page.component';
 import { SelectCharacterPageComponent } from './components/page-modules/select-character-page/select-character-page.component';
+import { SharedModule } from './components/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SelectCharacterPageComponent } from './components/page-modules/select-c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
