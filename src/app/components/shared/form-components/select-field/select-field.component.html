@@ -1,0 +1,17 @@
+<div *ngIf="form" [formGroup]="form" [class]="class">
+  <label [for]="label">{{ label }}</label>
+  <select
+    [formControlName]="controllerName"
+    [id]="controllerName"
+    [name]="controllerName"
+    [multiple]="multiple"
+  >
+    <option [selected]="select" [hidden]="hidden" [disabled]="disabled">
+      {{ selected }}
+    </option>
+    <option [value]="opt.value" *ngFor="let opt of options">
+      {{ opt.name }}
+    </option>
+  </select>
+</div>
+<small *ngIf="validation">{{ validationLabel }}</small>

@@ -1,15 +1,12 @@
 @use '../../../../../styles/base/colors' as *;
 @use '../../../../../styles/base/mixins' as *;
 
-div {
-@include setFlexBox(column, center, center);
-
 label{
   @include text($white, PoppinsBold);
   margin-top: 1em;
 }
 
-input{
+select{
   @include title($black, PoppinsRegular, 16px);
   display: inline-block;
   border: 1px solid transparent;
@@ -22,7 +19,3 @@ small{
   @include text($red, PoppinsRegular);
   font-weight: 400;
 }
-
-}
-
-

@@ -1,1 +1,11 @@
-<p>input-field works!</p>
+<div *ngIf="form" [formGroup]="form" [class]="class">
+  <label [for]="label">{{ label }}</label>
+  <input
+    [type]="type"
+    [formControlName]="controllerName"
+    [id]="controllerName"
+    [name]="controllerName"
+    [placeholder]="placeholder"
+  />
+</div>
+<small *ngIf="validation">{{ validationLabel }}</small>
