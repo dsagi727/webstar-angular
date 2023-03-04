@@ -17,12 +17,13 @@ input{
   border-radius: .5rem;
   text-align: center;
 }
-
+}
 small{
   @include text($red, PoppinsRegular);
-  font-weight: 400;
+  display: inline-block;
+  margin-top: 1em;
+  padding: .5em 1em;
+  border-radius: .5rem;
+  background-color:$white ;
 }
-
-}
-
 

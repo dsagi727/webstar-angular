@@ -27,10 +27,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut:2000,
-      positionClass: 'custom-toastr-position',
-      preventDuplicates: true,
-      closeButton: true,
-      progressBar: true
     })
   ],
   providers: [],

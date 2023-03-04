@@ -13,10 +13,9 @@
     width: 100%;
 
   &--copyright {
-    font-size: 14px;
-    color: $white;
+    @include text($white, PoppinsRegular);
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     right: 0;
   }
 }

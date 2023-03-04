@@ -11,11 +11,11 @@
       <app-input-field
         [form]="loginForm"
         [label]="'User Name'"
-        [controllerName]="'userName'"
+        [controllerName]="'username'"
         [type]="'text'"
         [placeholder]="'Enter user name...'"
         [validation]="
-          loginForm.get('userName')?.invalid && loginForm.get('userName')?.dirty
+          loginForm.get('username')?.invalid && loginForm.get('username')?.dirty
         "
         [validationLabel]="'Not a valid user name!'"
       ></app-input-field>
@@ -32,7 +32,12 @@
         [validationLabel]="'Not a valid password!'"
       ></app-input-field>
 
-      <button type="submit" class="btn-solid">Belépés</button>
+      <button [disabled]="loginForm.invalid" type="submit" class="btn-solid">
+        Belépés
+      </button>
     </form>
+    <small class="login__errorLogin" *ngIf="errorLogin"
+      >Login error: {{ errorLogin }}</small
+    >
   </div>
 </section>

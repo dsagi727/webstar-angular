@@ -26,6 +26,7 @@
 
   &--logout {
     @include setFlexBox(row, center, center);
+    cursor: pointer;
     position: absolute;
     padding: 1em 0;
     top: 0;

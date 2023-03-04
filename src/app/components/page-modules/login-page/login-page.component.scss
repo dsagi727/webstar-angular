@@ -35,5 +35,14 @@
       margin-top: 3rem;
     }
   }
+
+  &__errorLogin{
+    @include text($red, PoppinsRegular);
+    display: inline-block;
+    margin-top: 1em;
+    padding: .5em 1em;
+    border-radius: .5rem;
+    background-color:$white ;
+  }
 }
 
