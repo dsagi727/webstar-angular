@@ -1,10 +1,23 @@
 @use '../../../../styles/base/mixins' as *;
 @use '../../../../styles/base/colors' as *;
 
-.copyright {
-  @include text($white, PoppinsRegular);
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
-  color: $white;
+
+.footer {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  bottom:10px;
+
+  &__container{
+    @include setFlexBox(row, center, center);
+    width: 100%;
+
+  &--copyright {
+    font-size: 14px;
+    color: $white;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+  }
+}
 }
