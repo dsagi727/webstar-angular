@@ -3,19 +3,30 @@
     <h3>Webstar</h3>
     <h1>Frontend</h1>
 
-    <form class="login__column--form">
+    <form
+      class="login__column--form"
+      [formGroup]="loginForm"
+      (ngSubmit)="userAuth()"
+    >
       <label>Felhasználónév</label>
-      <input type="text" name="" id="" placeholder="Poppins Regurlar 16px" />
+      <input
+        type="text"
+        name="userName"
+        id="userName"
+        formControlName="userName"
+        placeholder="Poppins Regurlar 16px"
+      />
 
       <label>Jelszó</label>
       <input
         type="password"
-        name=""
-        id=""
+        name="password"
+        id="password"
         placeholder="Poppins Regurlar 16px"
+        formControlName="password"
       />
 
-      <button class="btn-solid">Belépés</button>
+      <button type="submit" class="btn-solid">Belépés</button>
     </form>
   </div>
 </section>
