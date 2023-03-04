@@ -29,20 +29,6 @@
     &--form {
       @include setFlexBox(column, center, center);
       margin-top: 5em;
-
-      label{
-        @include text($white, PoppinsBold);
-        margin-top: 1em;
-      }
-
-      input{
-        @include title($black, PoppinsRegular, 16px);
-        display: inline-block;
-        border: 1px solid transparent;
-        padding: .6em 5em;
-        border-radius: .5rem;
-        text-align: center;
-      }
     }
 
     button {

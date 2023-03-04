@@ -8,23 +8,29 @@
       [formGroup]="loginForm"
       (ngSubmit)="userAuth()"
     >
-      <label>Felhasználónév</label>
-      <input
-        type="text"
-        name="userName"
-        id="userName"
-        formControlName="userName"
-        placeholder="Poppins Regurlar 16px"
-      />
+      <app-input-field
+        [form]="loginForm"
+        [label]="'User Name'"
+        [controllerName]="'userName'"
+        [type]="'text'"
+        [placeholder]="'Enter user name...'"
+        [validation]="
+          loginForm.get('userName')?.invalid && loginForm.get('userName')?.dirty
+        "
+        [validationLabel]="'Not a valid user name!'"
+      ></app-input-field>
 
-      <label>Jelszó</label>
-      <input
-        type="password"
-        name="password"
-        id="password"
-        placeholder="Poppins Regurlar 16px"
-        formControlName="password"
-      />
+      <app-input-field
+        [form]="loginForm"
+        [label]="'Password'"
+        [controllerName]="'password'"
+        [type]="'password'"
+        [placeholder]="'Enter password...'"
+        [validation]="
+          loginForm.get('password')?.invalid && loginForm.get('password')?.dirty
+        "
+        [validationLabel]="'Not a valid password!'"
+      ></app-input-field>
 
       <button type="submit" class="btn-solid">Belépés</button>
     </form>
