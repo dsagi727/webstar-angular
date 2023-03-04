@@ -1,8 +1,10 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InputFieldComponent } from './form-components/input-field/input-field.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { SelectFieldComponent } from './form-components/select-field/select-field.component';
 
 
 
@@ -10,13 +12,17 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     InputFieldComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    SelectFieldComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    InputFieldComponent,
+    SelectFieldComponent
   ]
 })
 export class SharedModule { }
