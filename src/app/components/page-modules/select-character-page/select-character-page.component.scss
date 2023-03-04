@@ -1,0 +1,156 @@
+@use '../../../../styles/base/mixins' as *;
+@use '../../../../styles/base/colors' as *;
+@use '../../../../styles/base/fonts' as *;
+
+section{
+  background: url('../../../../assets/images/background-images/bg_2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .character{
+    @include setFlexBox(row, center, center);
+    margin: 0 auto;
+    width: 80%;
+    height: 100vh;
+
+    &__info {
+      @include setFlexBox(column, flex-start, flex-start);
+      padding-right: 2rem;
+      width: 80%;
+      height: 80vh;
+
+      &--box{
+       display: grid;
+       grid-template-columns: 1fr 2fr 1fr 2fr;
+       width: 60%;
+       height: auto;
+
+       .square {
+        @include setFlexBox(row, center, center);
+        background-color: $white;
+        padding: 1em;
+
+        .black{
+          width: 2.5rem;
+          height: 2.5rem;
+          background: black;
+        }
+       }
+
+       .text {
+        padding: 0 1em;
+
+        h3{
+          @include title($yellow, PoppinsBold, 16px);
+        }
+
+        h5{
+          @include title($white, PoppinsBlack, 20px);
+        }
+      }
+
+       .icon {
+        @include setFlexBox(row, center, center);
+        background-color: $yellow;
+        padding: 0.5em;
+
+        img{
+          width: 2rem;
+          height: auto;
+        }
+       }
+      }
+
+      &--details{
+
+    .character-name{
+          font-family: Starjedi;
+          color: $white;
+          line-height: 1em;
+          font-size: 90px;
+          margin-top: .5em;
+          padding: 0.2em 0;
+        }
+      }
+
+      &--modules{
+        margin-top: .5em;
+        padding: 0.2em 0;
+
+        h3{
+          @include title($white, PoppinsBlack, 24px);
+        }
+
+        .module{
+          display: grid;
+          grid-template-columns: 3fr 6fr;
+          gap: 2em;
+          width: 100%;
+
+          h3{
+            @include title($white, PoppinsBold, 18px);
+          }
+
+          p{
+            @include title($white, PoppinsRegular, 16px);
+
+          }
+        }
+      }
+    }
+
+    &__selector {
+      @include setFlexBox(column, space-between, flex-start);
+      padding-left: 2rem;
+      width: 80%;
+      height: 80vh;
+      // flex-wrap: wrap;
+
+      &--paginator{
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 1em;
+          padding: 0 4em;
+          width: 100%;
+
+          div{
+            @include setFlexBox(row, space-around, center);
+
+            img{
+              cursor: pointer;
+
+            }
+
+            .right-arrow{
+              transform: rotate(180deg);
+            }
+          }
+      }
+
+      &--char-image{
+        position: relative;
+        z-index: 0;
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .circle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        background-color: $yellow;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 99rem;
+      }
+
+    }
+  }
+}
+
+
