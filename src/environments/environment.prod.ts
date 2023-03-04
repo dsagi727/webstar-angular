@@ -1,3 +1,8 @@
+import { appId_value } from "./keys";
+
 export const environment = {
-  production: true
+  production: true,
+   webstar: {
+    appId: appId_value,
+  }
 };
