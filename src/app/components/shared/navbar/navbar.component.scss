@@ -1,0 +1,47 @@
+@use '../../../../styles/base/mixins' as *;
+@use '../../../../styles/base/colors' as *;
+
+.navbar {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  top:10px;
+
+  &__container{
+    @include setFlexBox(row, center, center);
+    width: 100%;
+
+  &--logo {
+    @include setFlexBox(row, center, center);
+    position: absolute;
+    padding: 1em 0;
+    top: 0;
+    left: 0;
+
+    h5 {
+      @include title($white, PoppinsBold, 16px);
+      padding: .5em;
+    }
+  }
+
+  &--logout {
+    @include setFlexBox(row, center, center);
+    position: absolute;
+    padding: 1em 0;
+    top: 0;
+    right: 0;
+
+    h5 {
+      @include title($white, PoppinsBold, 16px);
+      padding: .5em;
+    }
+  }
+  hr {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    color: $white;
+  }
+}
+
+}
