@@ -10,14 +10,14 @@
     >
       <app-input-field
         [form]="loginForm"
-        [label]="'User Name'"
+        [label]="'Username'"
         [controllerName]="'username'"
         [type]="'text'"
-        [placeholder]="'Enter user name...'"
+        [placeholder]="'Enter username...'"
         [validation]="
           loginForm.get('username')?.invalid && loginForm.get('username')?.dirty
         "
-        [validationLabel]="'Not a valid user name!'"
+        [validationLabel]="'Not a valid username!'"
       ></app-input-field>
 
       <app-input-field

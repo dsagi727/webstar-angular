@@ -46,7 +46,7 @@ export class AuthService {
       }),
       catchError((error: HttpErrorResponse) => {
         this.toaster.warning(error.error['error'])
-        return error.error;
+        return error.error['error'];
       })
     ) as Observable<AuthUserModel>
   }
