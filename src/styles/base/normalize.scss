@@ -1,5 +1,6 @@
 @use 'colors' as *;
 @use 'mixins' as *;
+@use 'fonts' as *;
 
 html {
   scroll-behavior: smooth;
@@ -16,6 +17,7 @@ body{
   padding: 0;
   min-width: 500px;
   background-color: $black;
+  font-family: PoppinsRegular;
 }
 
 // H1-H6

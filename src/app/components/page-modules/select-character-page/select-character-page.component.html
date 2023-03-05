@@ -7,25 +7,20 @@
         </div>
         <div class="text">
           <h3>Side</h3>
-          <h5>Dark</h5>
+          <h5>{{ selectedCharacter?.side }}</h5>
         </div>
         <div class="icon">
           <img src="../../../../assets/icons/star.svg" alt="" />
         </div>
         <div class="text">
-          <h3>Side</h3>
-          <h5>Dark</h5>
+          <h3>Special Skill</h3>
+          <h5>{{ selectedCharacter?.force?.power }}</h5>
         </div>
       </div>
       <div class="character__info--details">
-        <h1 class="character-name">Boba Fett</h1>
+        <h1 class="character-name" [innerHTML]="selectedCharacter?.name"></h1>
         <p class="descripton">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci ex
-          illum quibusdam, sed quaerat necessitatibus asperiores dicta aperiam
-          ad aliquid suscipit. Iusto ea porro excepturi dicta ipsum voluptatum
-          corporis recusandae! Optio culpa fugit dolor, delectus suscipit sit
-          repellat maiores eligendi quisquam minus facere modi possimus eius
-          totam sunt eum ipsam.
+          {{ selectedCharacter?.description }}
         </p>
       </div>
       <div class="character__info--modules">
@@ -43,8 +38,13 @@
       <div class="character__selector--paginator">
         <div></div>
         <div>
-          <img src="../../../../assets/icons/arrow_circle.png" alt="left" />
           <img
+            (click)="pagerLeft()"
+            src="../../../../assets/icons/arrow_circle.png"
+            alt="left"
+          />
+          <img
+            (click)="pagerRight()"
             class="right-arrow"
             src="../../../../assets/icons/arrow_circle.png"
             alt="right"
@@ -52,7 +52,13 @@
         </div>
       </div>
       <div class="character__selector--char-image">
-        <img src="../../../../assets/images/characters/boba.png" alt="" />
+        <img
+          *ngIf="selectedCharacter?.id"
+          src="../../../../assets/images/characters/{{
+            selectedCharacter?.id
+          }}.png"
+          alt=""
+        />
         <div>
           <span class="circle"></span>
         </div>
