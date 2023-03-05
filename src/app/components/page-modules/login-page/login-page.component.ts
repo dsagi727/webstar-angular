@@ -1,10 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { ToastrService } from 'ngx-toastr';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { AtuhUserModel } from 'src/app/models/authUser.model';
+import { AuthUserModel } from 'src/app/models/authUser.model';
 import { Subscription } from 'rxjs';
 
 
@@ -36,10 +34,9 @@ export class LoginPageComponent implements OnInit, OnDestroy {
   userAuth(): void{
     const userLogin = this.loginForm.value;
     if(userLogin){
-      console.log(userLogin);
       this.loginSubs = this.authService.loginUser(userLogin).subscribe(
         {
-          next: (data: AtuhUserModel) => {console.log(data)},
+          next: (data: AuthUserModel) => {},
           error: (error: HttpErrorResponse) => {
             console.log(error.message);
           },

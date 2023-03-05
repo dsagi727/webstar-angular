@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { Component } from '@angular/core';
-import { AtuhUserModel } from './models/authUser.model';
+import { AuthUserModel } from './models/authUser.model';
 import { AuthService } from './services/auth.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
 
-  loggedIn$!: Observable<AtuhUserModel | null>;
+  loggedIn$!: Observable<AuthUserModel | null>;
 
   constructor(private authService: AuthService){
     this.loggedIn$ = this.authService.loggedInStatus$
