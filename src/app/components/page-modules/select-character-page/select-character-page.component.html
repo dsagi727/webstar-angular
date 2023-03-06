@@ -18,7 +18,10 @@
         </div>
       </div>
       <div class="character__info--details">
-        <h1 class="character-name" [innerHTML]="selectedCharacter?.name"></h1>
+        <h1
+          class="character-name"
+          [innerHTML]="selectedCharacter?.name | safeHtml"
+        ></h1>
         <p class="descripton">
           {{ selectedCharacter?.description }}
         </p>
@@ -26,10 +29,12 @@
       <div class="character__info--modules">
         <h3>Modules</h3>
         <div class="module">
-          <div><h3>CRUD Management</h3></div>
+          <h3>CRUD Management</h3>
           <div>
             <p>Go to Character Edit Module</p>
-            <button class="btn-bordered">Edit Characters</button>
+            <button (click)="navigateToCRUD()" class="btn-bordered">
+              Edit Characters
+            </button>
           </div>
         </div>
       </div>

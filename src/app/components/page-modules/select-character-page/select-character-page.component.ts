@@ -1,6 +1,6 @@
-import { AuthUserModel } from 'src/app/models/authUser.model';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { CharacterService } from './../../../services/character.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CharacterModel } from 'src/app/models/character.model';
@@ -16,7 +16,7 @@ export class SelectCharacterPageComponent implements OnInit, OnDestroy {
   selectedCharacter?: CharacterModel;
   characterSubs?: Subscription;
 
-  constructor(private characterService: CharacterService, private authService: AuthService) { }
+  constructor(private characterService: CharacterService, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.characterSubs = this.characterService.characters$?.subscribe(
@@ -53,6 +53,10 @@ export class SelectCharacterPageComponent implements OnInit, OnDestroy {
         this.selectedCharacter = this.charactersList[i-1]
       }
     }
+  }
+
+  navigateToCRUD(){
+    this.router.navigate(['crud-management'])
   }
 
 }
