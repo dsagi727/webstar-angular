@@ -10,8 +10,8 @@ const routes: Routes = [
     path: '', component: LoginPageComponent
   },
   {
-    path: 'select-character', component: SelectCharacterPageComponent,
-    canActivate: [AuthGuard]
+    path: 'select-character', component: SelectCharacterPageComponent
+    // canActivate: [AuthGuard]
   }
 ];
 

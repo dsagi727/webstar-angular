@@ -11,12 +11,14 @@ import { SharedModule } from './components/shared/shared.module';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './components/page-modules/login-page/login-page.component';
 import { SelectCharacterPageComponent } from './components/page-modules/select-character-page/select-character-page.component';
+import { CrudManagementComponent } from './components/page-modules/crud-management/crud-management.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    SelectCharacterPageComponent
+    SelectCharacterPageComponent,
+    CrudManagementComponent
   ],
   imports: [
     BrowserModule,
