@@ -1,5 +1,5 @@
-import { exhaustMap, from, map, Observable, of, Subject, take, tap } from 'rxjs';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
@@ -11,26 +11,29 @@ import { AuthUserModel } from '../models/authUser.model';
 })
 export class CharacterService {
 
-  private readonly URL: string = 'https://developer.webstar.hu/rest/frontend-felveteli/v2/characters/';
+  private readonly CHARACTERS_URL: string = 'https://developer.webstar.hu/rest/frontend-felveteli/v2/characters/';
 
   characters$?: Observable<any>;
-  token!: string;
 
   constructor(private authService: AuthService, private http: HttpClient) {
     this.authService.loggedInStatus$.subscribe(
       {
         next: (user: AuthUserModel | null) => {
           if(user){
-            const headers = {
-              "Applicant-Id": environment.webstar.appId,
-              "Content-Type": "application/json",
-              "Application-Authorization": user.token
-           }
-           this.characters$ = from(this.http.get<any>(this.URL, {headers: headers}));
+           const headers: any = {
+             "Applicant-Id": environment.webstar.appId,
+             "Content-Type": "application/json",
+             "Application-Authorization": user.token
+          }
+         this.characters$ = this.getCharacters(headers);
           }
         }
       }
       )
+  }
+
+  getCharacters(headers: any): Observable<CharacterModel[]> {
+   return this.http.get<CharacterModel[]>(this.CHARACTERS_URL, {headers: headers});
   }
 
 }

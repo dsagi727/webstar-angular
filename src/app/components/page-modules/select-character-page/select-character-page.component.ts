@@ -12,7 +12,7 @@ import { CharacterModel } from 'src/app/models/character.model';
 })
 export class SelectCharacterPageComponent implements OnInit, OnDestroy {
 
-  charactersList: CharacterModel[] = [];
+  charactersList!: CharacterModel[];
   selectedCharacter?: CharacterModel;
   characterSubs?: Subscription;
 

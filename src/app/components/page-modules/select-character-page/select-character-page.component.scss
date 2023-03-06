@@ -14,7 +14,7 @@ section{
     height: 100vh;
 
     &__info {
-      @include setFlexBox(column, space-between, flex-start);
+      @include setFlexBox(column, flex-start, flex-start);
       padding-right: 2rem;
       width: 80%;
       height: 80vh;
