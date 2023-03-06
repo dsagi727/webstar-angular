@@ -45,7 +45,7 @@ export class AuthService {
         this.router.navigate(['select-character']);
       }),
       catchError((error: HttpErrorResponse) => {
-        this.toaster.warning(error.error['error'])
+        this.toaster.error(error.error['error'])
         return error.error['error'];
       })
     ) as Observable<AuthUserModel>
