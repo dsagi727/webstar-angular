@@ -34,7 +34,7 @@ export class AuthService {
     return this.http.post<AuthUserModel>(this.AUTH_URL, body, {headers: headers}).pipe(
       tap((authUser: AuthUserModel)=> {
         this.loggedInStatus.next(authUser);
-        this.toaster.success('Logged in Succesful')
+        this.toaster.success('Sikeres bejelentkezés')
         this.router.navigate(['select-character']);
       }),
       catchError((error: HttpErrorResponse) => {

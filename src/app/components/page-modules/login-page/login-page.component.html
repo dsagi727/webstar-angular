@@ -10,26 +10,26 @@
     >
       <app-input-field
         [form]="loginForm"
-        [label]="'Username'"
+        [label]="'email'"
         [controllerName]="'username'"
         [type]="'text'"
         [placeholder]="'Enter username...'"
         [validation]="
           loginForm.get('username')?.invalid && loginForm.get('username')?.dirty
         "
-        [validationLabel]="'Not a valid username!'"
+        [validationLabel]="'Helytelen email formátum'"
       ></app-input-field>
 
       <app-input-field
         [form]="loginForm"
-        [label]="'Password'"
+        [label]="'jelszó'"
         [controllerName]="'password'"
         [type]="'password'"
         [placeholder]="'Enter password...'"
         [validation]="
           loginForm.get('password')?.invalid && loginForm.get('password')?.dirty
         "
-        [validationLabel]="'Not a valid password!'"
+        [validationLabel]="'A jelszónak minimum 6 karakternek kell lennie!'"
       ></app-input-field>
 
       <button [disabled]="loginForm.invalid" type="submit" class="btn-solid">

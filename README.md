@@ -32,3 +32,5 @@ Az alkalmazásohoz az általános npm csomagon kívűl ngx-toaster lett felhaszn
 4. Az alkalmazás törzsében ./star-wars-app könyvtárban állva a terminálon telepítsük a node package manager csomagot, ami telepíti a futtatáshoz szükséges összes függőségeket. A terminálban adjuk ki az `npm i -s` parancsot.
 
 5. Miután települt a npm könyvtár a projekten belül, tehát a ./star-wars-app könyvtáron belül állva a terminálon adjuk ki az `ng s -o` parancsot, amely a kliensgép böngészőjében egy új lapon a localhot:4200 megnyitja az alkalmazást.
+
+6. A projekthez kapott API applicationId biztonsági okokból a projekt src/environment mappájában egy key.ts fájlban exportálható string változóban került meghatározásra. A sikeres API azonosításhoz, készíts egy key.ts fájlt az src/environment mappájában és másold be az alábbi kódot egy valid applicationId-val. `export const appId_value = "VALID_ID";`
