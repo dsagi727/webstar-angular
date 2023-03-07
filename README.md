@@ -8,15 +8,15 @@ Az alkalmazás lehetővé teszi a felhasználók számára, hogy jó vagy rossz 
 
 - Az alkalmazás Angular-alapú model-service-component architectúra jellemzi
 - Az egy végpontkéréseket dedikált service-k szolgálják ki
-- A dizájn SCSS preprocesszor mixin-ek és a BEM koncenció alkalmazásával készült
-- A komponensekhez tartozó dizájnok szintén scss-ben kerültek meghatározásra követve a bem konvenciós alapelveket
-- A felület oldalaihoz csak belépés után elérhetőek
+- A dizájn SCSS preprocesszor mixin-ek és a BEM konvenció alkalmazásával készült
+- A komponensekhez tartozó dizájnok szintén scss-ben kerültek meghatározásra
+- A felület oldalaihoz csak belépést követően elérhetők
 
 ## Megjelenés:
 
 - Az alkalmazás egy minimál fejléc és lábléccel rendelkezik, amelyen a navigáció és az alkalmazásból való kijelentkezés is történik
 - Az alkalmazás nem reszponzív a képernyő széllessége rögzítve van minimum 1024px-en
-- Az alkalmazott színeket, betűtípusokat, mixineket és elére meghatárzott stílus osztályokat a styles/base mappa tárolja és a main.scss fájl gyűjti össze.
+- Az alkalmazott színeket, betűtípusokat, mixineket és az előre meghatárzott stílus osztályokat a styles/base mappa tárolja, és a main.scss fájl gyűjti össze.
 
 ## Alkalmazás kipróbálása és függőségek
 
