@@ -1,27 +1,34 @@
-# Angular
+# Webstar project - Star Wars App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+## Alkalmazás:
 
-## Development server
+Az alkalmazás lehetővé teszi a felhasználók számára, hogy jó vagy rossz karakterként játsszanak egy szimulált környezetben, a Star Wars franchise-hoz hű megjelenéssel és érzéssel.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technikai követelmények, előírások:
 
-## Code scaffolding
+- Az alkalmazás Angular-alapú model-service-component architectúra jellemzi
+- Az egy végpontkéréseket dedikált service-k szolgálják ki
+- A dizájn SCSS preprocesszor mixin-ek és a BEM koncenció alkalmazásával készült
+- A komponensekhez tartozó dizájnok szintén scss-ben kerültek meghatározásra követve a bem konvenciós alapelveket
+- A felület oldalaihoz csak belépés után elérhetőek
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Megjelenés:
 
-## Build
+- Az alkalmazás egy minimál fejléc és lábléccel rendelkezik, amelyen a navigáció és az alkalmazásból való kijelentkezés is történik
+- Az alkalmazás nem reszponzív a képernyő széllessége rögzítve van minimum 1024px-en
+- Az alkalmazott színeket, betűtípusokat, mixineket és elére meghatárzott stílus osztályokat a styles/base mappa tárolja és a main.scss fájl gyűjti össze.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Alkalmazás kipróbálása és függőségek
 
-## Running unit tests
+Az alkalmazásohoz az általános npm csomagon kívűl ngx-toaster lett felhasználva a hibakezelés megjelenítésére.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Először forkolni kell az adott GitHub repository tartalmát.
+   link!!
 
-## Running end-to-end tests
+2. A kliensgépen le kell klónozni Forkolt repository tartalmát az alábbo terminál parancs segítségével `git clone link`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Ha a kliensgépen nincs még fent az Angular keretrendszer, akkor azt telepíteni szükséges az alábbi terminál parancsal `npm i -g @angular/cli`
 
-## Further help
+4. Az alkalmazás törzsében ./star-wars-app könyvtárban állva a terminálon telepítsük a node package manager csomagot, ami telepíti a futtatáshoz szükséges összes függőségeket. A terminálban adjuk ki az `npm i -s` parancsot.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+5. Miután települt a npm könyvtár a projekten belül, tehát a ./star-wars-app könyvtáron belül állva a terminálon adjuk ki az `ng s -o` parancsot, amely a kliensgép böngészőjében egy új lapon a localhot:4200 megnyitja az alkalmazást.
