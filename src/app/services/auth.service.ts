@@ -46,7 +46,7 @@ export class AuthService {
 
     logoutUser(): void {
     this.loggedInStatus.next(null);
-    this.toaster.info('May the force be with you!')
+    this.toaster.info('Az erő legyen veled!')
     this.router.navigate([''])
   }
 
