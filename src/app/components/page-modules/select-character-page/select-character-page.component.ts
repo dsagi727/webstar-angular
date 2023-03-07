@@ -5,12 +5,14 @@ import { CharacterService } from './../../../services/character.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CharacterModel } from 'src/app/models/character.model';
 
+
 @Component({
   selector: 'app-select-character-page',
   templateUrl: './select-character-page.component.html',
   styleUrls: ['./select-character-page.component.scss']
 })
 export class SelectCharacterPageComponent implements OnInit, OnDestroy {
+
 
   charactersList!: CharacterModel[];
   selectedCharacter?: CharacterModel;
@@ -20,8 +22,8 @@ export class SelectCharacterPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.characterSubs = this.characterService.characters$?.subscribe(
-      (chars) => {
-        this.charactersList = chars.characters;
+      (chars: CharacterModel[]) => {
+        this.charactersList = chars;
         this.selectedCharacter = this.charactersList[0];
       }
     )
@@ -55,8 +57,5 @@ export class SelectCharacterPageComponent implements OnInit, OnDestroy {
     }
   }
 
-  navigateToCRUD(){
-    this.router.navigate(['crud-management'])
-  }
 
 }
