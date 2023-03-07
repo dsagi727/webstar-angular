@@ -23,9 +23,9 @@ Az alkalmazás lehetővé teszi a felhasználók számára, hogy jó vagy rossz 
 Az alkalmazásohoz az általános npm csomagon kívűl ngx-toaster lett felhasználva a hibakezelés megjelenítésére.
 
 1. Először forkolni kell az adott GitHub repository tartalmát.
-   link!!
+   https://github.com/dsagi727/webstar.git
 
-2. A kliensgépen le kell klónozni Forkolt repository tartalmát az alábbo terminál parancs segítségével `git clone link`
+2. A kliensgépen le kell klónozni Forkolt repository tartalmát az alábbo terminál parancs segítségével `git clone https://github.com/dsagi727/webstar.git`
 
 3. Ha a kliensgépen nincs még fent az Angular keretrendszer, akkor azt telepíteni szükséges az alábbi terminál parancsal `npm i -g @angular/cli`
 
