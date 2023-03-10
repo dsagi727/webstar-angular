@@ -39,4 +39,4 @@ _Megjegyzés_:
 A belépéshez egy érvényes e-mail-cím és jelszó páros (példa):
 |E-mail | Jelszó |
 | ------ | ------ |
-|frontend@webstar.hu|s9@:8BpuC]\*Q,e,A|
+|frontend@webstar.hu| password |
