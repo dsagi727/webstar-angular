@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "webstar-c2104"
+  },
+  "targets": {
+    "webstar-c2104": {
+      "hosting": {
+        "star-wars-app": [
+          "webstar-c2104"
+        ]
+      }
+    }
+  }
+}

@@ -13,6 +13,9 @@ import { LoginPageComponent } from './components/page-modules/login-page/login-p
 import { SelectCharacterPageComponent } from './components/page-modules/select-character-page/select-character-page.component';
 import { Safe } from './utils/safe-html.pipe';
 
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { environment } from 'src/environments/environment.prod';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +31,7 @@ import { Safe } from './utils/safe-html.pipe';
     RouterModule,
     SharedModule,
     BrowserAnimationsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     ToastrModule.forRoot({
       timeOut:2000,
       preventDuplicates: true,

@@ -2,10 +2,11 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-import { appId_value } from "./keys";
+import { appId_value, firebaseConfig } from "./keys";
 
 export const environment = {
   production: false,
+  firebaseConfig,
   webstar: {
     appId: appId_value,
   }
